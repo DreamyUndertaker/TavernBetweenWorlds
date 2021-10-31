@@ -73,19 +73,21 @@ namespace LaunhcerForMinecraft
             // 
             // LoginField
             // 
+            this.LoginField.Font = new System.Drawing.Font("Gabriela", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LoginField.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LoginField.Location = new System.Drawing.Point(12, 313);
             this.LoginField.Name = "LoginField";
-            this.LoginField.Size = new System.Drawing.Size(277, 23);
+            this.LoginField.Size = new System.Drawing.Size(277, 25);
             this.LoginField.TabIndex = 2;
             this.LoginField.Enter += new System.EventHandler(this.LoginField_Enter);
             this.LoginField.Leave += new System.EventHandler(this.LoginField_Leave);
             // 
             // PassField
             // 
+            this.PassField.Font = new System.Drawing.Font("Gabriela", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PassField.Location = new System.Drawing.Point(12, 342);
             this.PassField.Name = "PassField";
-            this.PassField.Size = new System.Drawing.Size(277, 23);
+            this.PassField.Size = new System.Drawing.Size(277, 25);
             this.PassField.TabIndex = 3;
             this.PassField.Enter += new System.EventHandler(this.PassField_Enter);
             this.PassField.Leave += new System.EventHandler(this.PassField_Leave);
@@ -133,33 +135,33 @@ namespace LaunhcerForMinecraft
             // RegistrationLabel
             // 
             this.RegistrationLabel.AutoSize = true;
-            this.RegistrationLabel.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegistrationLabel.Font = new System.Drawing.Font("Gabriela", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegistrationLabel.ForeColor = System.Drawing.Color.White;
             this.RegistrationLabel.Location = new System.Drawing.Point(8, 391);
             this.RegistrationLabel.Name = "RegistrationLabel";
-            this.RegistrationLabel.Size = new System.Drawing.Size(127, 24);
+            this.RegistrationLabel.Size = new System.Drawing.Size(137, 26);
             this.RegistrationLabel.TabIndex = 8;
             this.RegistrationLabel.Text = "Регистрация";
             // 
             // LostPassLabel
             // 
             this.LostPassLabel.AutoSize = true;
-            this.LostPassLabel.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LostPassLabel.Font = new System.Drawing.Font("Gabriela", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LostPassLabel.ForeColor = System.Drawing.Color.White;
             this.LostPassLabel.Location = new System.Drawing.Point(8, 424);
             this.LostPassLabel.Name = "LostPassLabel";
-            this.LostPassLabel.Size = new System.Drawing.Size(163, 24);
+            this.LostPassLabel.Size = new System.Drawing.Size(179, 26);
             this.LostPassLabel.TabIndex = 9;
             this.LostPassLabel.Text = "Забыли пароль?";
             // 
             // FAQLabel
             // 
             this.FAQLabel.AutoSize = true;
-            this.FAQLabel.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FAQLabel.Font = new System.Drawing.Font("Gabriela", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FAQLabel.ForeColor = System.Drawing.Color.White;
             this.FAQLabel.Location = new System.Drawing.Point(8, 457);
             this.FAQLabel.Name = "FAQLabel";
-            this.FAQLabel.Size = new System.Drawing.Size(261, 24);
+            this.FAQLabel.Size = new System.Drawing.Size(282, 26);
             this.FAQLabel.TabIndex = 10;
             this.FAQLabel.Text = "Есть вопрос? Нажми сюда!";
             // 
@@ -184,7 +186,7 @@ namespace LaunhcerForMinecraft
             this.Controls.Add(this.LogoImage);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Font = new System.Drawing.Font("Georgia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Gabriela", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);

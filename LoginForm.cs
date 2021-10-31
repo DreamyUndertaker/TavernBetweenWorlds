@@ -78,6 +78,6 @@ namespace LaunhcerForMinecraft
             }
         }
 
-        
+
     }
 }
