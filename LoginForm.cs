@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,6 +79,48 @@ namespace LaunhcerForMinecraft
             }
         }
 
+        private void RegistrationLabel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+        }
 
+        private void EnterButton_Click(object sender, EventArgs e)
+        {
+            String loginUser = LoginField.Text;
+            String PassUser = PassField.Text;
+
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `Users` WHERE `login` = @uL AND `password` = @uP", db.getConnection());
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = PassUser;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                //this.Hide();
+                MessageBox.Show("Enter");
+                
+            }
+            else if (LoginField.Text != "Admin" && PassField.Text != "Admin")
+            {
+                MessageBox.Show("Denied");
+            }
+
+            if (LoginField.Text == "Admin" || PassField.Text == "Admin")
+            {
+                this.Hide();
+                MessageBox.Show("Admin enter");
+            }
+
+        }
     }
 }

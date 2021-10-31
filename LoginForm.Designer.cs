@@ -41,6 +41,7 @@ namespace LaunhcerForMinecraft
             this.RegistrationLabel = new System.Windows.Forms.Label();
             this.LostPassLabel = new System.Windows.Forms.Label();
             this.FAQLabel = new System.Windows.Forms.Label();
+            this.EnterButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -142,6 +143,7 @@ namespace LaunhcerForMinecraft
             this.RegistrationLabel.Size = new System.Drawing.Size(137, 26);
             this.RegistrationLabel.TabIndex = 8;
             this.RegistrationLabel.Text = "Регистрация";
+            this.RegistrationLabel.Click += new System.EventHandler(this.RegistrationLabel_Click);
             // 
             // LostPassLabel
             // 
@@ -165,6 +167,19 @@ namespace LaunhcerForMinecraft
             this.FAQLabel.TabIndex = 10;
             this.FAQLabel.Text = "Есть вопрос? Нажми сюда!";
             // 
+            // EnterButton
+            // 
+            this.EnterButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EnterButton.Font = new System.Drawing.Font("Gabriela", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(204)));
+            this.EnterButton.ForeColor = System.Drawing.Color.White;
+            this.EnterButton.Location = new System.Drawing.Point(733, 544);
+            this.EnterButton.Name = "EnterButton";
+            this.EnterButton.Size = new System.Drawing.Size(239, 65);
+            this.EnterButton.TabIndex = 11;
+            this.EnterButton.Text = "Войти";
+            this.EnterButton.UseVisualStyleBackColor = true;
+            this.EnterButton.Click += new System.EventHandler(this.EnterButton_Click);
+            // 
             // LoginForm
             // 
             this.AllowDrop = true;
@@ -174,6 +189,7 @@ namespace LaunhcerForMinecraft
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 621);
+            this.Controls.Add(this.EnterButton);
             this.Controls.Add(this.FAQLabel);
             this.Controls.Add(this.LostPassLabel);
             this.Controls.Add(this.RegistrationLabel);
@@ -220,6 +236,7 @@ namespace LaunhcerForMinecraft
         private System.Windows.Forms.Label RegistrationLabel;
         private System.Windows.Forms.Label LostPassLabel;
         private System.Windows.Forms.Label FAQLabel;
+        private System.Windows.Forms.Button EnterButton;
     }
 }
 
