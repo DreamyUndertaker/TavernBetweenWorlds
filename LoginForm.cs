@@ -122,5 +122,30 @@ namespace LaunhcerForMinecraft
             }
 
         }
+        private void DiskordLink_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://discord.gg/Rbzp7u3p5S");
+        }
+
+        private void VKLink_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://vk.com/tavern.between.worlds");
+        }
+
+        private void YouTubeLink_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/channel/UCivsDc7UxKgL49Epc-LmM8Q");
+        }
+
+        private void CivitatumTeamLink_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://vk.com/civitatum.team");
+        }
+
+        private void SettingsBox_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.Show();
+        }
     }
 }
