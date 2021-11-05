@@ -106,19 +106,13 @@ namespace LaunhcerForMinecraft
 
             if (table.Rows.Count > 0)
             {
-                //this.Hide();
                 MessageBox.Show("Enter");
                 
             }
-            else if (LoginField.Text != "Admin" && PassField.Text != "Admin")
+            else
             {
-                MessageBox.Show("Denied");
-            }
+                MessageBox.Show("Неверный логин, или пароль");
 
-            if (LoginField.Text == "Admin" || PassField.Text == "Admin")
-            {
-                this.Hide();
-                MessageBox.Show("Admin enter");
             }
 
         }
