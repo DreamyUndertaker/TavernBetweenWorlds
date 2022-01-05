@@ -9,7 +9,7 @@ namespace LaunhcerForMinecraft
 {
     class DB
     {
-       MySqlConnection connection = new MySqlConnection("Server=mysql.joinserver.ru; port=3306; user=u30506_f3ixYzr7Aq; password=VHlCu1V4wwVqh7K1OZkRg3qS; database=s30506_tavern");
+       MySqlConnection connection = new MySqlConnection("Server=mysql3.joinserver.ru; port=3306; user=u63691_EFbmN7i36W; password=kYpc8BZDyk0jAbB6zhWDqZ3b; database=s63691_TavernBetweenWorlds");
 
         public void openConnection()
         {
