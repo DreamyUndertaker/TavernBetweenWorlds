@@ -3,8 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -88,12 +91,12 @@ namespace LaunhcerForMinecraft
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            String loginUser = LoginField.Text;
-            String PassUser = PassField.Text;
+            String loginUser = LoginField.Text;//login
+            String PassUser = PassField.Text;//password
 
-            DB db = new DB();
+            DB db = new DB();//memory for DB
 
-            DataTable table = new DataTable();
+            DataTable table = new DataTable();//uesr table
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
@@ -101,15 +104,24 @@ namespace LaunhcerForMinecraft
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
             command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = PassUser;
 
+            //string username = loginUser;
+            //string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+
+
             adapter.SelectCommand = command;
             adapter.Fill(table);
+
+
 
             if (table.Rows.Count > 0)
             {
                 MessageBox.Show("Enter");
-                
+
+                Process.Start("C:\\Users\\vadii\\AppData\\Roaming\\.minecraft\\TLauncher.exe");
+
+                this.Close();
             }
-            else
+            else if (table.Rows.Count < 0 || PassField.Text == "Введите пароль" || PassField.Text == "")
             {
                 MessageBox.Show("Неверный логин, или пароль");
 
