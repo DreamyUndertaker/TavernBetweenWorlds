@@ -175,5 +175,7 @@ namespace LaunhcerForMinecraft
             this.Hide();
             loginForm.Show();
         }
+
+
     }
 }
