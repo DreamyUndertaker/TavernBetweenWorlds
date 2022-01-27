@@ -15,8 +15,13 @@ using System.Windows.Forms;
 
 namespace LaunhcerForMinecraft
 {
+    public class YandexDisApiDownlad : Download
+    { 
+        
+    }
+
     public partial class LoginForm : Form
-    {
+    {   
         public LoginForm()
         {
             InitializeComponent();
@@ -25,6 +30,7 @@ namespace LaunhcerForMinecraft
 
             PassField.Text = "Введите пароль";
             PassField.ForeColor = Color.Gray;
+
 
         }
 
@@ -102,6 +108,8 @@ namespace LaunhcerForMinecraft
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
+            
+
             String loginUser = LoginField.Text;//логин
             String PassUser = PassField.Text;//праоль
 
@@ -118,11 +126,13 @@ namespace LaunhcerForMinecraft
             string curFile = @"C:\Users\vadii\AppData\Roaming\.minecraft\start.bat";
             string mods = @"C:\\Users\\vadii\\AppData\\Roaming\\.minecraft\\mods\\14.01.2022_mods.zip";
 
+            DownloadMods();
+
             if (table.Rows.Count > 0)//проверка регистрации пользователя
             {
                 MessageBox.Show("Enter");
 
-                Process.Start("folderName" + "TLauncher.exe");// запуск tlauncher
+                Process.Start(folderName + "TLauncher.exe");// запуск tlauncher
 
                 //this.Close();
                 if (!File.Exists(curFile))//проверка наличия батника сервера
@@ -132,14 +142,14 @@ namespace LaunhcerForMinecraft
 
                 if (!File.Exists(mods))//проверка наличия сборки модов 
                 {
-                    DownloadMods();
+                    
 
                 }
 
-                if (File.Exists(mods))
+               /* if (File.Exists(mods))
                 {
                     Unpacking();
-                }
+                }*/
 
             }
             else if (table.Rows.Count < 0 || PassField.Text == "Введите пароль" || PassField.Text == "")
@@ -160,18 +170,23 @@ namespace LaunhcerForMinecraft
 
         private void DownloadMods()//скачавание сборки модов
         {
-            WebClient webClient = new WebClient();
-            webClient.DownloadFile(new Uri ("https://drive.google.com/file/d/1aMUOGkmoWmYHjFQcHP7UIgyQCJ7ONL_0/view?usp=sharing"), @"C:\Users\vadii\AppData\Roaming\.minecraft\mods\14.01.2022_mods.zip");
+            
 
+            WebClient webClient = new WebClient();
+            webClient.DownloadFile(new Uri ("ttps://docs.google.com/u/0/nonceSigner?nonce=a1672oam8vkki&continue=1aMUOGkmoWmYHjFQcHP7UIgyQCJ7ONL_0"), @"C:\Users\vadii\AppData\Roaming\.minecraft\mods\zip.zip");
+
+            
         }
 
-        private void Unpacking()//распаковка арзива с модами
+       /* private void Unpacking()//распаковка арзива с модами
         {
-            string zipPath = "folderName" + @"\mods\14.01.2022_mods.zip";
-            string extractPath = "folderName" + @"\mods\"; ;
+            
+
+            string zipPath = folderName + @"\mods\14.01.2022_mods.zip";
+            string extractPath = folderName + @"\mods\"; ;
 
             ZipFile.ExtractToDirectory(zipPath, extractPath);
-        }
+        }*/
 
         private void DiskordLink_Click(object sender, EventArgs e)
         {

@@ -17,9 +17,10 @@ namespace LaunhcerForMinecraft
         {
             InitializeComponent();
 
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             
             // показать диалог выбора папки
@@ -32,15 +33,19 @@ namespace LaunhcerForMinecraft
                 folderName = folderBrowserDialog1.SelectedPath;
                 //MessageBox.Show(folderName);
                 textBox1.Text = (folderName);
+                
             }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             LoginForm loginForm = new LoginForm();
-            loginForm.Show();
+            //loginForm.Show();
             MessageBox.Show(folderName);
         }
     }
+    
+
 }
