@@ -15,10 +15,10 @@ using System.Windows.Forms;
 
 namespace LaunhcerForMinecraft
 {
-    public class YandexDisApiDownlad : Download
-    { 
+    //public class YandexDisApiDownlad : Download
+    //{ 
         
-    }
+    //}
 
     public partial class LoginForm : Form
     {   
@@ -124,15 +124,14 @@ namespace LaunhcerForMinecraft
             adapter.Fill(table);
 
             string curFile = @"C:\Users\vadii\AppData\Roaming\.minecraft\start.bat";
-            string mods = @"C:\\Users\\vadii\\AppData\\Roaming\\.minecraft\\mods\\14.01.2022_mods.zip";
+            string mods = @"C:\\Users\\vadii\\AppData\\Roaming\\.minecraft\\mods\\zip.zip";
 
-            DownloadMods();
 
             if (table.Rows.Count > 0)//проверка регистрации пользователя
             {
                 MessageBox.Show("Enter");
 
-                Process.Start(folderName + "TLauncher.exe");// запуск tlauncher
+                //Process.Start(folderName + "TLauncher.exe");// запуск tlauncher
 
                 //this.Close();
                 if (!File.Exists(curFile))//проверка наличия батника сервера
@@ -140,17 +139,15 @@ namespace LaunhcerForMinecraft
                     ServerInstaller();
                 }
 
-                if (!File.Exists(mods))//проверка наличия сборки модов 
+                if (!File.Exists(mods))//проверка наличия сборки модов
                 {
-                    
+                    DownloadMods();
 
                 }
-
-               /* if (File.Exists(mods))
-                {
+                
+                if (File.Exists(mods)){
                     Unpacking();
-                }*/
-
+                }
             }
             else if (table.Rows.Count < 0 || PassField.Text == "Введите пароль" || PassField.Text == "")
             {
@@ -173,20 +170,20 @@ namespace LaunhcerForMinecraft
             
 
             WebClient webClient = new WebClient();
-            webClient.DownloadFile(new Uri ("ttps://docs.google.com/u/0/nonceSigner?nonce=a1672oam8vkki&continue=1aMUOGkmoWmYHjFQcHP7UIgyQCJ7ONL_0"), @"C:\Users\vadii\AppData\Roaming\.minecraft\mods\zip.zip");
+            webClient.DownloadFile(new Uri ("https://dl.uploadgram.me/62043faaf04bch?raw"), @"C:\Users\vadii\AppData\Roaming\.minecraft\mods\zip.zip");
 
             
         }
 
-       /* private void Unpacking()//распаковка арзива с модами
+        private void Unpacking()//распаковка арзива с модами
         {
             
 
-            string zipPath = folderName + @"\mods\14.01.2022_mods.zip";
-            string extractPath = folderName + @"\mods\"; ;
+            string zipPath = @"C:\Users\vadii\AppData\Roaming\.minecraft\mods\zip.zip";
+            string extractPath = @"C:\Users\vadii\AppData\Roaming\.minecraft\mods\";
 
             ZipFile.ExtractToDirectory(zipPath, extractPath);
-        }*/
+        }
 
         private void DiskordLink_Click(object sender, EventArgs e)
         {

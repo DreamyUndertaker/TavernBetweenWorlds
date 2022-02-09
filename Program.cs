@@ -19,7 +19,7 @@ namespace LaunhcerForMinecraft
         }
 
     }
-    public class YandexDiskCliProgram
+    /*public class YandexDiskCliProgram
     {
         public static int Main(string[] args)
         {
@@ -81,5 +81,5 @@ namespace LaunhcerForMinecraft
         {
             task.Wait();
         }
-    }
+    }*/
 }

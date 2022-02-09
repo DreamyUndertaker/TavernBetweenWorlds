@@ -6,7 +6,7 @@ using YandexDisk.Client.Http;
 
 namespace LaunhcerForMinecraft
 {
-    public class Download
+    /*public class Download
     {
         public DiskHttpApi DiskClient { get; }
 
@@ -69,5 +69,5 @@ namespace LaunhcerForMinecraft
                 downloadStream.CopyTo(fileStream);
             }
         }
-    }
+    }*/
 }
